@@ -5,8 +5,7 @@
 //If exists print true otherwise false.
 // Code should be readable and scalable("Sapace complexity" "Time complexity")
 
-const array1=['a','b','x','y'];
-const array2=['d','c','x','z'];
+
 function findCommonElements(array1,array2){
     // loop through the first array and create object where properties === items in the array
     let map={};
@@ -20,11 +19,17 @@ function findCommonElements(array1,array2){
 for(j=0;j<array2.length;i++){
 
     if(map[array2[j]]){
+        console.log("True");
         return true;
     }
 
 }
 return false;
 }
-findCommonElements(array1,array2);
+const array1=['a','b','x','y'];
+const array2=['d','c','x','z'];
+let result=findCommonElements(array1,array2);
+if(result){
+    console.log("Element found");
+}
 
