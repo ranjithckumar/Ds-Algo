@@ -1,5 +1,5 @@
 // add a method apend() to the linked list that adds a node to the end of the list
-
+// add a method prepend() to the linked list that adds a node to the begining of the list
 class LinkedList {
     constructor(value) {
       this.head = {
@@ -20,12 +20,22 @@ class LinkedList {
       this.length++;
       return this;
     }
-    
+    prepend(value) {
+        const newNode = {
+          value: value,
+          next: null
+        }
+        newNode.next = this.head;
+        this.head = newNode;
+        this.length++;
+        return this;
+      }
   }
   
   let myLinkedList = new LinkedList(10);
   myLinkedList.append(5);
   myLinkedList.append(16);
+  myLinkedList.prepend(1);
   
   
   
